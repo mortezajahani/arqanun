@@ -1,0 +1,717 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4ead8">
+<meta name="description" content="مؤسسه فرهنگی رسانه‌ای آفتاب؛ بستری برای اندیشه، فرهنگ، هنر و روایت.">
+<title>مؤسسه فرهنگی رسانه‌ای آفتاب</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --paper:#f4ead8;
+  --ink:#211e1b;
+  --muted:#74695e;
+  --red:#df211b;
+  --line:rgba(33,30,27,.16);
+  --white:#fffaf1;
+}
+
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+
+body {
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Vazirmatn,Tahoma,sans-serif;
+  line-height:1.9;
+}
+
+a {color:inherit;text-decoration:none}
+.wrap {width:min(1160px,calc(100% - 42px));margin:auto}
+.topline {height:5px;background:var(--red)}
+
+header {
+  position:sticky;
+  top:0;
+  z-index:9;
+  background:rgba(244,234,216,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav {
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand {
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-weight:900;
+  font-size:1.05rem;
+}
+
+.mark {
+  width:42px;
+  height:42px;
+  background:var(--red);
+  color:white;
+  display:grid;
+  place-items:center;
+  font-size:1.5rem;
+  transform:rotate(-7deg);
+}
+
+.brand small {
+  display:block;
+  font-size:.65rem;
+  color:var(--muted);
+  font-weight:500;
+}
+
+.links {
+  display:flex;
+  gap:25px;
+  font-size:.86rem;
+  color:#51483f;
+}
+
+.links a:hover {color:var(--red)}
+
+.navbtn,.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:9px 17px;
+  border:1px solid var(--ink);
+  font-size:.85rem;
+  font-weight:700;
+  transition:.2s;
+}
+
+.navbtn:hover,.btn:hover {
+  background:var(--ink);
+  color:var(--paper);
+}
+
+/* Hero */
+
+.hero {
+  padding:62px 0 72px;
+  position:relative;
+  overflow:hidden;
+}
+
+.eyebrow {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--red);
+  font-size:.78rem;
+  font-weight:800;
+}
+
+.eyebrow:before {
+  content:"";
+  width:30px;
+  height:2px;
+  background:var(--red);
+}
+
+h1 {
+  font-size:clamp(2.25rem,5.5vw,5rem);
+  line-height:1.28;
+  margin:16px 0;
+  font-weight:900;
+  letter-spacing:-.04em;
+  max-width:850px;
+}
+
+h1 em {
+  font-style:normal;
+  color:var(--red);
+}
+
+.intro {
+  max-width:620px;
+  color:var(--muted);
+  font-size:1.03rem;
+  margin:0 0 24px;
+}
+
+.actions {
+  display:flex;
+  gap:11px;
+  flex-wrap:wrap;
+}
+
+.btn.primary {
+  background:var(--red);
+  border-color:var(--red);
+  color:white;
+}
+
+.btn.primary:hover {background:#b91814}
+
+.heroart {
+  margin-top:42px;
+  position:relative;
+}
+
+.heroart:before {
+  content:"";
+  position:absolute;
+  inset:18px -14px -14px 14px;
+  border:1px solid var(--red);
+}
+
+.heroart img {
+  width:100%;
+  height:auto;
+  display:block;
+  position:relative;
+  box-shadow:0 18px 50px #2b1e201c;
+}
+
+.imagetag {
+  position:absolute;
+  bottom:16px;
+  right:16px;
+  background:var(--paper);
+  padding:7px 13px;
+  font-size:.75rem;
+  font-weight:700;
+}
+
+/* Ticker */
+
+.ticker {
+  background:var(--red);
+  color:white;
+  padding:11px 0;
+  white-space:nowrap;
+  overflow:hidden;
+  font-size:.83rem;
+  font-weight:700;
+}
+
+.ticker span {margin-left:45px}
+.ticker b {margin:0 9px}
+
+/* Sections */
+
+section {padding:78px 0}
+
+.head {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:25px;
+  margin-bottom:32px;
+}
+
+.kicker {
+  color:var(--red);
+  font-size:.78rem;
+  font-weight:800;
+}
+
+.head h2 {
+  font-size:clamp(1.8rem,3.4vw,2.8rem);
+  line-height:1.4;
+  margin:7px 0 0;
+  font-weight:900;
+}
+
+.head p {
+  max-width:420px;
+  color:var(--muted);
+  margin:0;
+  font-size:.9rem;
+}
+
+/* About */
+
+.about {
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:48px;
+  align-items:start;
+}
+
+.aboutcopy {
+  font-size:1.05rem;
+  line-height:2.2;
+}
+
+.quote {
+  border-right:4px solid var(--red);
+  padding:6px 18px;
+  margin-top:24px;
+  font-size:1.2rem;
+  font-weight:800;
+}
+
+.manifesto {
+  background:var(--ink);
+  color:var(--paper);
+  padding:34px;
+  position:relative;
+  overflow:hidden;
+}
+
+.manifesto:after {
+  content:"آفتاب";
+  position:absolute;
+  left:-12px;
+  bottom:-55px;
+  font-size:7rem;
+  font-weight:900;
+  color:#ffffff0b;
+}
+
+.manifesto h3 {
+  font-size:1.35rem;
+  margin:0 0 12px;
+}
+
+.manifesto p {
+  color:#d8cbbb;
+  font-size:.9rem;
+  margin:0;
+}
+
+/* Services */
+
+.services {background:#eee1cc}
+
+.cards {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.card {
+  padding:25px;
+  border:1px solid var(--line);
+  min-height:205px;
+  background:#f8efdf;
+  transition:.2s;
+}
+
+.card:hover {
+  transform:translateY(-5px);
+  border-color:var(--red);
+}
+
+.num {
+  color:var(--red);
+  font-weight:900;
+  font-size:.8rem;
+}
+
+.card h3 {
+  font-size:1.15rem;
+  margin:15px 0 8px;
+}
+
+.card p {
+  color:var(--muted);
+  font-size:.87rem;
+  margin:0;
+}
+
+/* Projects */
+
+.projects {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.project {
+  padding:27px;
+  background:var(--white);
+  border-top:3px solid var(--red);
+}
+
+.project small {
+  color:var(--red);
+  font-weight:800;
+}
+
+.project h3 {
+  margin:9px 0;
+  font-size:1.25rem;
+}
+
+.project p {
+  color:var(--muted);
+  font-size:.9rem;
+  margin:0;
+}
+
+/* Statement */
+
+.statement {
+  background:var(--red);
+  color:white;
+  padding:58px 0;
+}
+
+.statement .wrap {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+}
+
+.statement h2 {
+  font-size:clamp(1.6rem,3.5vw,2.8rem);
+  line-height:1.5;
+  margin:0;
+  max-width:720px;
+}
+
+.statement p {
+  margin:8px 0 0;
+  color:#ffe1dc;
+}
+
+.statement .btn {
+  border-color:white;
+  white-space:nowrap;
+}
+
+.statement .btn:hover {
+  background:white;
+  color:var(--red);
+}
+
+/* Contact */
+
+.contact {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+.contact p {color:var(--muted)}
+
+.contactbox {
+  border:1px solid var(--line);
+  padding:25px;
+}
+
+.contactbox strong {
+  display:block;
+  margin-bottom:7px;
+}
+
+.contactbox a {color:var(--red)}
+
+/* Footer */
+
+footer {
+  background:var(--ink);
+  color:var(--paper);
+  padding:25px 0;
+  font-size:.8rem;
+}
+
+.foot {
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center;
+}
+
+.foot span {color:#c8bbaa}
+
+/* Responsive */
+
+@media(max-width:760px) {
+  .links {display:none}
+  .nav {height:68px}
+  .hero {padding-top:42px}
+  .about,.contact {
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+  .cards {grid-template-columns:1fr 1fr}
+  .head {display:block}
+  .head p {margin-top:12px}
+  .statement .wrap {display:block}
+  .statement .btn {margin-top:20px}
+  .foot {display:block}
+  .foot span {
+    display:block;
+    margin-top:8px;
+  }
+}
+
+@media(max-width:480px) {
+  .wrap {width:min(100% - 30px,1160px)}
+  .cards,.projects {grid-template-columns:1fr}
+  .card {min-height:0}
+  .heroart:before {inset:10px -7px -7px 7px}
+  .imagetag {font-size:.65rem}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topline"></div>
+
+<header>
+<div class="wrap nav">
+
+<a class="brand" href="#home">
+<span class="mark">آ</span>
+<span>
+مؤسسه فرهنگی رسانه‌ای آفتاب
+<small>اندیشه • فرهنگ • رسانه</small>
+</span>
+</a>
+
+<nav class="links">
+<a href="#about">درباره ما</a>
+<a href="#fields">حوزه‌های فعالیت</a>
+<a href="#projects">رویدادها و برنامه‌ها</a>
+<a href="#contact">ارتباط با ما</a>
+</nav>
+
+<a class="navbtn" href="#contact">همراه آفتاب شوید</a>
+
+</div>
+</header>
+
+<main id="home">
+
+<section class="hero">
+<div class="wrap">
+
+<div class="eyebrow">روایت ما، از همین‌جا آغاز می‌شود</div>
+
+<h1>
+برای روشن‌تر دیدن،<br>
+<em>برای بهتر روایت کردن.</em>
+</h1>
+
+<p class="intro">
+آفتاب، خانه‌ای برای گفت‌وگو، آفرینش و کنش فرهنگی است؛
+جایی برای پیوند اندیشه و هنر با رسانه و جامعه.
+</p>
+
+<div class="actions">
+<a class="btn primary" href="#about">آشنایی با آفتاب</a>
+<a class="btn" href="#projects">فعالیت‌های ما</a>
+</div>
+
+<div class="heroart">
+<img src="aftab-team.jpg" alt="اعضا و همراهان مؤسسه فرهنگی رسانه‌ای آفتاب">
+<div class="imagetag">مؤسسه فرهنگی رسانه‌ای آفتاب</div>
+</div>
+
+</div>
+</section>
+
+<div class="ticker">
+<div class="wrap">
+<span>اندیشه <b>✳</b> فرهنگ <b>✳</b> هنر <b>✳</b> رسانه <b>✳</b> گفت‌وگو <b>✳</b> آفرینش</span>
+<span>اندیشه <b>✳</b> فرهنگ <b>✳</b> هنر <b>✳</b> رسانه</span>
+</div>
+</div>
+
+<section id="about">
+<div class="wrap">
+
+<div class="head">
+<div>
+<div class="kicker">01 / درباره ما</div>
+<h2>آفتاب؛ فرصتی برای<br>باهم ساختن</h2>
+</div>
+<p>ما به نیروی فرهنگ برای ساختن جامعه‌ای آگاه‌تر، خلاق‌تر و گفت‌وگومحور باور داریم.</p>
+</div>
+
+<div class="about">
+
+<div class="aboutcopy">
+<p>
+مؤسسه فرهنگی رسانه‌ای آفتاب بستری مستقل برای فعالیت‌های فرهنگی،
+هنری و رسانه‌ای است. ما تلاش می‌کنیم ایده‌ها را به تجربه‌های جمعی
+تبدیل کنیم و میان نسل‌ها، نگاه‌ها و روایت‌های گوناگون پل بزنیم.
+</p>
+
+<p>
+از نشست و رویداد فرهنگی تا تولید محتوای رسانه‌ای،
+از ادبیات و هنر تا آموزش و مشارکت اجتماعی؛
+آفتاب جایی برای آغاز کردن و ادامه دادن است.
+</p>
+
+<div class="quote">
+«فرهنگ، نوری است که با تقسیم شدن، بیشتر می‌شود.»
+</div>
+</div>
+
+<div class="manifesto">
+<h3>نگاه ما</h3>
+<p>
+به گفت‌وگو به‌جای سکوت، به خلاقیت به‌جای تکرار
+و به مشارکت به‌جای تماشا باور داریم.
+آفتاب با همراهی آدم‌هایی شکل می‌گیرد که
+برای بهتر شدن جهان پیرامونشان ایده‌ای در سر دارند.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="services" id="fields">
+<div class="wrap">
+
+<div class="head">
+<div>
+<div class="kicker">02 / چه می‌کنیم؟</div>
+<h2>میدان‌های فعالیت</h2>
+</div>
+<p>از ایده تا اجرا؛ در مسیرهایی که فرهنگ، هنر و رسانه به هم می‌رسند.</p>
+</div>
+
+<div class="cards">
+
+<article class="card">
+<div class="num">01 — رسانه</div>
+<h3>تولید و روایت رسانه‌ای</h3>
+<p>تولید محتوای تصویری، نوشتاری و چندرسانه‌ای برای بازتاب مسائل و روایت تجربه‌های انسانی.</p>
+</article>
+
+<article class="card">
+<div class="num">02 — ادبیات</div>
+<h3>ادبیات و محافل فرهنگی</h3>
+<p>برگزاری نشست‌ها، حلقه‌های ادبی، شعرخوانی و برنامه‌هایی برای گسترش گفت‌وگوی فرهنگی.</p>
+</article>
+
+<article class="card">
+<div class="num">03 — رویداد</div>
+<h3>طراحی و اجرای رویداد</h3>
+<p>برنامه‌ریزی و اجرای گردهمایی‌ها، نشست‌های تخصصی، جشنواره‌ها و رویدادهای عمومی.</p>
+</article>
+
+<article class="card">
+<div class="num">04 — آموزش</div>
+<h3>آموزش و توانمندسازی</h3>
+<p>فراهم کردن فرصت یادگیری، تجربه عملی و رشد مهارت‌های فرهنگی و رسانه‌ای.</p>
+</article>
+
+<article class="card">
+<div class="num">05 — هنر</div>
+<h3>هنر و خلاقیت</h3>
+<p>حمایت از ایده‌های خلاق و همکاری میان هنرمندان، نویسندگان و فعالان فرهنگی.</p>
+</article>
+
+<article class="card">
+<div class="num">06 — اجتماع</div>
+<h3>مشارکت اجتماعی</h3>
+<p>ایجاد زمینه همکاری شهروندان و گروه‌های مردمی برای ساختن تجربه‌های جمعی مؤثر.</p>
+</article>
+
+</div>
+</div>
+</section>
+
+<section id="projects">
+<div class="wrap">
+
+<div class="head">
+<div>
+<div class="kicker">03 / در جریان</div>
+<h2>رویدادها و برنامه‌ها</h2>
+</div>
+<p>آفتاب در هر برنامه، فرصتی برای دیدار، یادگیری و ساختن یک تجربه مشترک فراهم می‌کند.</p>
+</div>
+
+<div class="projects">
+
+<article class="project">
+<small>حلقه ادبی</small>
+<h3>پنجگاه؛ قرار شعر و گفت‌وگو</h3>
+<p>نشستی برای شنیدن شعر، کشف صداهای تازه و شکل دادن به گفت‌وگویی زنده پیرامون ادبیات.</p>
+</article>
+
+<article class="project">
+<small>برنامه‌های فرهنگی</small>
+<h3>نشست‌ها و دورهمی‌های آفتاب</h3>
+<p>گردهمایی‌هایی با حضور علاقه‌مندان، صاحب‌نظران و کنشگران حوزه فرهنگ، هنر و رسانه.</p>
+</article>
+
+</div>
+</div>
+</section>
+
+<div class="statement">
+<div class="wrap">
+<div>
+<h2>هر ایده‌ای می‌تواند نقطه شروع یک اتفاق روشن باشد.</h2>
+<p>اگر دغدغه‌ای فرهنگی داری، آفتاب جای گفت‌وگوی ماست.</p>
+</div>
+<a class="btn" href="#contact">با ما در ارتباط باش</a>
+</div>
+</div>
+
+<section id="contact">
+<div class="wrap">
+
+<div class="head">
+<div>
+<div class="kicker">04 / ارتباط</div>
+<h2>به آفتاب نزدیک‌تر شو</h2>
+</div>
+<p>برای همکاری، پیشنهاد برنامه، مشارکت در رویدادها یا گفت‌وگو درباره ایده‌هایتان با ما در ارتباط باشید.</p>
+</div>
+
+<div class="contact">
+
+<div>
+<h3>با هم، روایت‌های تازه می‌سازیم.</h3>
+<p>
+این وب‌سایت نقطه شروع ارتباط ماست.
+اطلاعات تماس و نشانی شبکه‌های اجتماعی مؤسسه
+را می‌توانید در این بخش اضافه کنید.
+</p>
+</div>
+
+<div class="contactbox">
+<strong>مؤسسه فرهنگی رسانه‌ای آفتاب</strong>
+<p>همدان، ایران</p>
+<p>ایمیل: <a href="mailto:info@aftabcmi.ir">info@aftabcmi.ir</a></p>
+<p>وب‌سایت: <a href="https://aftabcmi.ir">aftabcmi.ir</a></p>
+</div>
+
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="wrap foot">
+<strong>مؤسسه فرهنگی رسانه‌ای آفتاب</strong>
+<span>اندیشه، فرهنگ، هنر و رسانه — © 2026</span>
+</div>
+</footer>
+
+</body>
+</html>
