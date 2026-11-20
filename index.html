@@ -4,410 +4,550 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f6f3e9">
-<meta name="description" content="ارغنون؛ جهان شعر و اندیشه سید حسام حسینی">
+<meta name="theme-color" content="#f6f3eb">
+
 <title>ارغنون | سید حسام حسینی</title>
+<meta name="description" content="وب‌سایت رسمی سید حسام حسینی، شاعر با تخلص ارغنون">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Estedad:wght@400;500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Estedad:wght@300;400;500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-    --cream: #f6f3e9;
-    --paper: #fbf9f2;
-    --green: #294b38;
-    --green-dark: #1e382a;
-    --sage: #84957d;
-    --text: #28352c;
-    --muted: #788276;
-    --line: rgba(41, 75, 56, .14);
+  --bg: #f6f3eb;
+  --paper: #fdfbf6;
+  --green: #244738;
+  --dark: #193328;
+  --olive: #87977d;
+  --gold: #b49b68;
+  --text: #343d35;
+  --muted: #85877c;
+  --line: #e4e0d5;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background: var(--cream);
-    color: var(--text);
-    font-family: 'Vazirmatn', sans-serif;
-    line-height: 2;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Vazirmatn', sans-serif;
+  line-height: 2.1;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  color: inherit;
+  text-decoration: none;
 }
 
 .container {
-    width: min(1100px, 90%);
-    margin: auto;
+  width: min(1120px, 88%);
+  margin: auto;
 }
 
-/* Navigation */
+/* HEADER */
 
 header {
-    padding: 23px 0;
-    border-bottom: 1px solid var(--line);
+  height: 88px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  background: rgba(246,243,235,.96);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(12px);
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 25px;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo {
-    font-family: 'Estedad', sans-serif;
-    font-size: 25px;
-    font-weight: 800;
-    color: var(--green);
-    letter-spacing: -1px;
+.brand {
+  font-family: 'Estedad', sans-serif;
+  color: var(--green);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.3;
 }
 
-.nav-links {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-    font-size: 13px;
-    color: var(--muted);
+.brand small {
+  display: block;
+  font-family: 'Vazirmatn', sans-serif;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 400;
 }
 
-.nav-links a {
-    transition: .2s;
+.menu {
+  display: flex;
+  gap: 30px;
+  font-size: 12px;
+  color: #697268;
 }
 
-.nav-links a:hover {
-    color: var(--green);
+.menu a {
+  transition: .3s;
 }
 
-/* Hero */
+.menu a:hover {
+  color: var(--gold);
+}
+
+/* HERO */
 
 .hero {
-    min-height: 540px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 90px 20px;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
 }
 
-.hero-kicker {
-    color: var(--sage);
-    font-size: 12px;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
+.hero::before {
+  content: "ارغنون";
+  position: absolute;
+  left: -30px;
+  top: 100px;
+  font-family: 'Estedad', sans-serif;
+  font-size: clamp(130px, 24vw, 310px);
+  font-weight: 800;
+  color: rgba(36,71,56,.035);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 100px 0;
+}
+
+.eyebrow {
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 24px;
 }
 
 .hero h1 {
-    font-family: 'Estedad', sans-serif;
-    font-size: clamp(65px, 12vw, 115px);
-    font-weight: 800;
-    color: var(--green);
-    line-height: 1.5;
-    letter-spacing: -5px;
+  font-family: 'Estedad', sans-serif;
+  color: var(--green);
+  font-size: clamp(65px, 10vw, 112px);
+  line-height: 1.4;
+  font-weight: 800;
+  letter-spacing: -5px;
+}
+
+.hero h1 span {
+  color: var(--olive);
 }
 
 .hero-subtitle {
-    font-size: 17px;
-    color: var(--muted);
-    margin-top: 8px;
+  font-size: 16px;
+  color: var(--muted);
+  margin-top: 12px;
+  font-weight: 300;
 }
 
-.hero-line {
-    width: 45px;
-    height: 1px;
-    background: var(--sage);
-    margin: 35px auto;
+.hero-desc {
+  max-width: 530px;
+  font-size: 14px;
+  color: #74796f;
+  margin-top: 32px;
+  font-weight: 300;
+  line-height: 2.8;
 }
 
-.hero-description {
-    max-width: 460px;
-    font-size: 14px;
-    color: #687568;
-    line-height: 2.4;
+.line {
+  width: 55px;
+  height: 2px;
+  background: var(--gold);
+  margin-top: 35px;
 }
 
-/* Sections */
+/* GENERAL SECTIONS */
 
 section {
-    padding: 90px 0;
+  scroll-margin-top: 90px;
+}
+
+.section {
+  padding: 100px 0;
 }
 
 .section-heading {
-    margin-bottom: 45px;
-    text-align: center;
+  margin-bottom: 42px;
 }
 
-.section-heading span {
-    color: var(--sage);
-    font-size: 11px;
-    letter-spacing: 2px;
+.section-heading .eyebrow {
+  margin-bottom: 8px;
 }
 
 .section-heading h2 {
-    font-family: 'Estedad', sans-serif;
-    color: var(--green);
-    font-size: 29px;
-    font-weight: 600;
-    margin-top: 8px;
+  font-family: 'Estedad', sans-serif;
+  color: var(--green);
+  font-size: 34px;
+  font-weight: 700;
 }
 
-/* About */
+.section-heading p {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* ABOUT */
 
 .about {
-    background: var(--green);
-    color: #f6f3e9;
-    text-align: center;
+  background: var(--green);
+  color: var(--bg);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.5fr .5fr;
+  align-items: center;
+  gap: 70px;
 }
 
 .about .section-heading h2 {
-    color: var(--cream);
+  color: var(--bg);
 }
 
-.about .section-heading span {
-    color: #b8c4ad;
+.about .section-heading p {
+  color: #b9c6b9;
 }
 
 .about-text {
-    max-width: 680px;
-    margin: auto;
-    color: #e0e5da;
-    font-size: 15px;
-    line-height: 2.8;
-    font-weight: 300;
+  font-size: 15px;
+  line-height: 2.8;
+  color: #d9dfd7;
+  font-weight: 300;
+  max-width: 680px;
 }
 
-/* Poems */
+.about-symbol {
+  font-family: 'Estedad', sans-serif;
+  font-weight: 800;
+  color: rgba(255,255,255,.1);
+  font-size: 90px;
+  text-align: center;
+}
 
-.poems {
-    background: var(--cream);
+/* POETRY */
+
+.poetry-intro {
+  max-width: 760px;
+  color: #777e73;
+  font-size: 15px;
+  line-height: 2.8;
+  font-weight: 300;
+  margin-bottom: 50px;
 }
 
 .poem-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 28px;
-    max-width: 850px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
 }
 
-.poem-card {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: 17px;
-    padding: 45px 30px;
-    text-align: center;
-    box-shadow: 0 8px 28px rgba(42, 55, 43, .035);
-    transition: transform .3s, box-shadow .3s;
+.poem {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 42px 30px;
+  position: relative;
+  transition: .3s;
+  overflow: hidden;
 }
 
-.poem-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 13px 35px rgba(42, 55, 43, .07);
+.poem:hover {
+  border-color: #b5bda9;
+  transform: translateY(-4px);
 }
 
-.poem-card h3 {
-    font-family: 'Estedad', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--sage);
-    margin-bottom: 27px;
+.poem::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 75px;
+  background: var(--olive);
 }
 
-.poem-card h3::before {
-    content: "✳";
-    display: block;
-    font-size: 19px;
-    margin-bottom: 15px;
-    color: #9aa88e;
+.poem h3 {
+  font-family: 'Estedad', sans-serif;
+  font-size: 16px;
+  color: var(--green);
+  margin-bottom: 25px;
+  font-weight: 600;
 }
 
-.poem-text {
-    font-family: 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 2.5;
-    letter-spacing: 0;
-    color: #263b2e;
-    direction: rtl;
-    unicode-bidi: plaintext;
-    white-space: pre-line;
-    text-align: center;
-    margin: auto;
-    max-width: 680px;
+/* SPECIAL POETRY TYPOGRAPHY */
+
+.poem-content {
+  direction: rtl;
+  unicode-bidi: plaintext;
+  white-space: pre-line;
+  text-align: center;
+
+  font-family: 'Noto Naskh Arabic', serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 2.65;
+
+  color: #414c43;
+  font-feature-settings: "kern", "liga";
 }
 
-/* International poetry */
+.poem-separator {
+  width: 38px;
+  height: 1px;
+  background: var(--gold);
+  margin: 30px auto 0;
+}
 
-.quotes {
-    background: #eeeee3;
+.poem-wide {
+  grid-column: 1 / -1;
+}
+
+/* INTERNATIONAL LITERATURE QUOTES */
+
+.literature {
+  background: #eae9de;
+}
+
+.quote-intro {
+  font-size: 14px;
+  color: #7c8176;
+  max-width: 650px;
+  margin-top: -20px;
+  margin-bottom: 38px;
+  font-weight: 300;
 }
 
 .quote-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
 }
 
-.quote-card {
-    background: var(--paper);
-    padding: 35px;
-    border-radius: 14px;
-    border: 1px solid var(--line);
-    text-align: center;
+.quote {
+  padding: 40px;
+  border: 1px solid #d9d9ca;
+  background: rgba(255,255,255,.35);
+  transition: .3s;
+}
+
+.quote:hover {
+  background: var(--paper);
 }
 
 .quote-mark {
-    color: var(--sage);
-    font-family: Georgia, serif;
-    font-size: 42px;
-    line-height: 1;
+  color: var(--olive);
+  font-family: 'Estedad', sans-serif;
+  font-size: 55px;
+  line-height: 1;
 }
 
-.quote-text {
-    direction: ltr;
-    font-family: Georgia, serif;
-    font-size: 17px;
-    line-height: 1.9;
-    color: var(--green);
-    margin: 20px 0;
+.quote p {
+  font-family: 'Estedad', sans-serif;
+  color: var(--green);
+  font-size: 19px;
+  line-height: 2.5;
+  margin: 15px 0 25px;
+  font-weight: 500;
 }
 
-.quote-translation {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 2.3;
+.quote cite {
+  display: block;
+  font-style: normal;
+  color: #777e73;
+  font-size: 12px;
+  line-height: 2;
 }
 
-.quote-author {
-    margin-top: 20px;
-    font-size: 12px;
-    color: var(--sage);
+.quote .original {
+  color: #929487;
+  direction: ltr;
+  text-align: left;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  line-height: 2;
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+  padding-top: 15px;
 }
 
-/* Contact */
+/* CONTACT */
 
 .contact {
-    text-align: center;
+  text-align: center;
+  padding: 110px 20px;
 }
 
-.contact-text {
-    font-size: 14px;
-    color: var(--muted);
-    margin-bottom: 25px;
+.contact h2 {
+  font-family: 'Estedad', sans-serif;
+  color: var(--green);
+  font-size: 36px;
 }
 
-.instagram-link {
-    display: inline-block;
-    background: var(--green);
-    color: var(--cream);
-    padding: 10px 28px;
-    border-radius: 30px;
-    font-size: 13px;
-    transition: .2s;
+.contact p {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 15px auto 30px;
+  max-width: 500px;
+  line-height: 2.7;
 }
 
-.instagram-link:hover {
-    background: var(--green-dark);
-    transform: translateY(-2px);
+.instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 30px;
+  color: white;
+  background: var(--green);
+  border: 1px solid var(--green);
+  font-size: 13px;
+  transition: .3s;
 }
 
-/* Footer */
+.instagram:hover {
+  background: transparent;
+  color: var(--green);
+}
+
+.instagram svg {
+  width: 19px;
+  height: 19px;
+}
+
+/* FOOTER */
 
 footer {
-    background: var(--green-dark);
-    color: #cbd4c6;
-    padding: 25px 0;
+  background: var(--dark);
+  color: #b4bfb3;
+  padding: 35px 0;
+  font-size: 11px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-brand {
+  font-family: 'Estedad', sans-serif;
+  color: #f5f1e7;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+footer a {
+  color: #d2d8cf;
+}
+
+/* MOBILE */
+
+@media(max-width:750px) {
+
+  header {
+    height: 76px;
+  }
+
+  .container {
+    width: 88%;
+  }
+
+  .menu {
+    gap: 12px;
+    font-size: 10px;
+  }
+
+  .brand {
+    font-size: 22px;
+  }
+
+  .hero {
+    min-height: 540px;
+  }
+
+  .hero h1 {
+    letter-spacing: -3px;
+  }
+
+  .section {
+    padding: 75px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .about-symbol {
+    font-size: 65px;
+  }
+
+  .poem-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .poem-wide {
+    grid-column: auto;
+  }
+
+  .poem-content {
+    font-size: 18px;
+    line-height: 2.6;
+  }
+
+  .quote-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    flex-direction: column;
     text-align: center;
-    font-size: 11px;
+  }
 }
 
-footer span {
-    color: #aab99f;
-}
+@media(max-width:400px) {
 
-/* Responsive */
+  .menu {
+    gap: 8px;
+    font-size: 9px;
+  }
 
-@media (max-width: 700px) {
-    header {
-        padding: 17px 0;
-    }
+  .brand {
+    font-size: 20px;
+  }
 
-    nav {
-        flex-direction: column;
-        gap: 12px;
-    }
+  .poem {
+    padding: 32px 18px;
+  }
 
-    .nav-links {
-        gap: 18px;
-        font-size: 11px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .poem-content {
+    font-size: 17px;
+    line-height: 2.55;
+  }
 
-    .hero {
-        min-height: 460px;
-        padding: 65px 15px;
-    }
-
-    .hero h1 {
-        letter-spacing: -3px;
-    }
-
-    .hero-description {
-        font-size: 13px;
-    }
-
-    section {
-        padding: 65px 0;
-    }
-
-    .section-heading h2 {
-        font-size: 25px;
-    }
-
-    .about-text {
-        font-size: 13px;
-    }
-
-    .poem-card {
-        padding: 30px 16px;
-        border-radius: 14px;
-    }
-
-    .poem-text {
-        font-size: 19px;
-        line-height: 2.35;
-    }
-
-    .quote-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .quote-card {
-        padding: 27px 20px;
-    }
-}
-
-@media (max-width: 380px) {
-    .poem-text {
-        font-size: 18px;
-        line-height: 2.3;
-    }
-
-    .nav-links {
-        gap: 12px;
-    }
 }
 </style>
 </head>
@@ -415,173 +555,358 @@ footer span {
 <body>
 
 <header>
-    <div class="container">
-        <nav>
-            <a href="#home" class="logo">ارغنون</a>
-            <ul class="nav-links">
-                <li><a href="#home">خانه</a></li>
-                <li><a href="#about">درباره ارغنون</a></li>
-                <li><a href="#poems">اشعار</a></li>
-                <li><a href="#quotes">ادبیات جهان</a></li>
-                <li><a href="#contact">ارتباط</a></li>
-            </ul>
-        </nav>
-    </div>
+  <div class="container nav">
+
+    <a href="#home" class="brand">
+      ارغنون
+      <small>سید حسام حسینی</small>
+    </a>
+
+    <nav class="menu">
+      <a href="#home">خانه</a>
+      <a href="#about">درباره</a>
+      <a href="#poetry">اشعار</a>
+      <a href="#literature">ادبیات</a>
+      <a href="#contact">ارتباط</a>
+    </nav>
+
+  </div>
 </header>
 
 <main>
 
-<!-- Hero -->
+<!-- HERO -->
 
 <section class="hero" id="home">
-    <div class="hero-kicker">جهانی میان واژه‌ها</div>
-    <h1>ارغنون</h1>
-    <div class="hero-subtitle">سید حسام حسینی</div>
-    <div class="hero-line"></div>
-    <p class="hero-description">
-        شعر، تلاشی‌ست برای گفتن آنچه در سکوت جهان پنهان مانده است.
-        اینجا روایت واژه‌هاست؛ از انسان، عشق، اندوه و زندگی.
+
+  <div class="container hero-content">
+
+    <div class="eyebrow">
+      POETRY · THOUGHT · LITERATURE
+    </div>
+
+    <h1>ارغنون<span>.</span></h1>
+
+    <div class="hero-subtitle">
+      سید حسام حسینی | شاعر
+    </div>
+
+    <p class="hero-desc">
+      شعر، جست‌وجوی انسان در جهان کلمات است؛
+      تلاشی برای بیان آنچه در عمق جان می‌گذرد
+      و در زبان روزمره مجال ظهور نمی‌یابد.
     </p>
+
+    <div class="line"></div>
+
+  </div>
+
 </section>
 
-<!-- About -->
+<!-- ABOUT -->
 
-<section class="about" id="about">
-    <div class="container">
-        <div class="section-heading">
-            <span>ABOUT THE POET</span>
-            <h2>درباره ارغنون</h2>
-        </div>
+<section class="about section" id="about">
 
-        <p class="about-text">
-            سید حسام حسینی، شاعر و نویسنده‌ای است که جهان خود را
-            در زبان شعر جست‌وجو می‌کند. ارغنون نامی برای این جهان
-            است؛ جهانی که در آن واژه‌ها از مرز بیان عبور می‌کنند
-            و به تجربه‌ای از اندیشه، احساس و زیستن بدل می‌شوند.
-            <br>
-            این صفحه، دریچه‌ای است به شعرها و تأملات او.
-        </p>
+  <div class="container about-grid">
+
+    <div>
+
+      <div class="section-heading">
+        <div class="eyebrow">ABOUT</div>
+        <h2>درباره ارغنون</h2>
+        <p>سید حسام حسینی</p>
+      </div>
+
+      <p class="about-text">
+        ارغنون، تخلص ادبی سید حسام حسینی است؛
+        نامی در پیوند با موسیقی کلمات، جهان شعر
+        و تجربه انسانی.
+
+        <br>
+
+        این صفحه، فضایی برای معرفی شاعر،
+        انتشار گزیده آثار و پرداختن به جهان
+        گسترده ادبیات و اندیشه است.
+      </p>
+
     </div>
+
+    <div class="about-symbol">
+      ارغنون
+    </div>
+
+  </div>
+
 </section>
 
-<!-- Poems -->
+<!-- POEMS -->
 
-<section class="poems" id="poems">
-    <div class="container">
-        <div class="section-heading">
-            <span>SELECTED POEMS</span>
-            <h2>از دفتر ارغنون</h2>
-        </div>
+<section class="section" id="poetry">
 
-        <div class="poem-grid">
+  <div class="container">
 
-            <article class="poem-card">
-                <h3>از دفتر ارغنون</h3>
-                <p class="poem-text">چنان شدی که نشد پیدا، زچهره ی تو معمایت
-...
-که شیخ بغض هنر دارد، اگر خبر بشود وای ات</p>
-            </article>
+    <div class="section-heading">
+      <div class="eyebrow">SELECTED POEMS</div>
+      <h2>گزیده اشعار</h2>
+      <p>از دفتر شعر ارغنون</p>
+    </div>
 
-            <article class="poem-card">
-                <h3>از دفتر ارغنون</h3>
-                <p class="poem-text">بگو کجا بگریزم از این قفس که منم
-...
-شکست پشتم از این غم اگرچه تهمتنم</p>
-            </article>
+    <p class="poetry-intro">
+      شعر، گاهی روایت یک دلتنگی است،
+      گاهی پرسشی بی‌پاسخ و گاهی مواجهه‌ای
+      بی‌واسطه با عشق، جهان و خویشتن.
+      در این بخش، گزیده‌ای از اشعار ارغنون را می‌خوانید.
+    </p>
 
-            <article class="poem-card">
-                <h3>از دفتر ارغنون</h3>
-                <p class="poem-text">با وعده و وعید وصالت
-...
-از بس که انتظار کشیدی</p>
-            </article>
+    <div class="poem-grid">
 
-            <article class="poem-card">
-                <h3>از دفتر ارغنون</h3>
-                <p class="poem-text">غمی لبخند زد ناگاه غمگین شد غمی دیگر
+      <!-- POEM A -->
+
+      <article class="poem">
+
+        <h3>از دفتر ارغنون</h3>
+
+        <div class="poem-content">چنان شدی که نشد پیدا، زچهره ی تو معمایت
+بگو که مقصدت اینجا نیست، به سایه ات به قدم هایت
+درون آینه حیرانم، برون آینه ویرانم
+بخوان مرا که پریشانم، به نظم زلف چلیپایت
+هزار آینه آهم من، هزار آه گناهم من
+عیار قلب سیاهم من، به شوق سنجش فردایت
+به رقص آمده پاکوبان، شکست خورده ی مغلوبان
+قسم به مسلک مصلوبان، منم یگانه مسیحایت
+چو عشق گمشده ی آدم، هنوز تازه ای و مبهم
+به آسمان که ببالم هم، نمی رسم به بلندایت
+دل ای گرفته به خون منزل، تویی و این تن ناقابل
+ز راه مانده و پا در گل، ز دست خواهش بیجایت
+بمان مسافر سرگردان، کدام کفر؟کدام ایمان؟
+که دردی از تو نشد درمان، ز مسجد و ز کلیسایت
+اگرچه باده اثر دارد، عیان منوش خطر دارد
+که شیخ بغض هنر دارد، اگر خبر بشود وای ات</div>
+
+        <div class="poem-separator"></div>
+
+      </article>
+
+      <!-- POEM B -->
+
+      <article class="poem">
+
+        <h3>از دفتر ارغنون</h3>
+
+        <div class="poem-content">بگو کجا بگریزم از این قفس که منم
+به تنگ آمده جانم ز تنگنای تنم
+در انتظار قدوم بهار بودم و حیف
+سواره های خزان تاختند برچمنم
+فلک قباله ی شیرین به نام شاهان زد
+من فلک زده اما هنوز کوهکنم
+مرا به وسوسه خواندند تا که فهمیدند
+غریب مانده تنم در حصار پیرهنم
+سیاه کرد مرا مکر چرخ شعبده باز
+مخواه از اینهمه نیرنگ و رنگ دم نزنم
+شکنجه دیده ی تقدیر نا برادری ام
+شکست پشتم از این غم اگرچه تهمتنم</div>
+
+        <div class="poem-separator"></div>
+
+      </article>
+
+      <!-- POEM C -->
+
+      <article class="poem poem-wide">
+
+        <h3>از دفتر ارغنون</h3>
+
+        <div class="poem-content">با وعده و وعید وصالت
+ما را به این دیار کشیدی
+خواندی مرا به مسلخ عشقت
+وانگه ز من دمار کشیدی
+ای دل غم التهاب خودت بود
+تقدیر انتخاب خودت بود
+در خمره ات شراب خودت بود
+چندین چرا خمار کشیدی
+باران شکست پنجره ات را
+بغضت جوید خرخره ات را
+از باد برد خاطره ات را
+بیهوده جور یار کشیدی
+گر چشم بود دوخته بودم
+گر آبرو فروخته بودم
+پیش از قصاص سوخته بودم
+خاکستری به دار کشیدی
+ای آسمان کران نگاهت
+گمراه کسیت آن نگاهت
+بر لب رسید جان نگاهت
+از بس که انتظار کشیدی</div>
+
+        <div class="poem-separator"></div>
+
+      </article>
+
+      <!-- POEM D - NEW -->
+
+      <article class="poem poem-wide">
+
+        <h3>از دفتر ارغنون</h3>
+
+        <div class="poem-content">غمی لبخند زد ناگاه غمگین شد غمی دیگر
+امانت عشق بود اما حقیقت ماتمی دیگر
+ملال انگیز دنیا را به دوش ما نهاد اما
+به منزل می رسیم ای دل تحمل کن کمی دیگر
+در این بازار ننگ و نام تقدیرت مبارک باد
+همانا از تبار عصمت آمد مریمی دیگر
+به آغوشم بکش رقصان ولی در خانه هم پنهان
+که در دنیای قدیسان نمانده محرمی دیگر
 به این تاریک مالامال خورشیدی تعارف کن
-
+به آن اجساد جاری هدیه کن عیسی دمی دیگر
+به هر گامی مرا چاه زمین می بلعد افعی وار
+شغادی را علم کردند سوی رستمی دیگر
 زمین خورد آسمان ما! –ولی فردا؟ -چه فردایی؟
+چنان خاورمیانه سرنوشت مبهمی دیگر
 خیابان ها تهی از عشق ، قحط آدمی زاد است
+به دنبال چه می گردی بنا کن عالمی دیگر!</div>
 
-به دنبال چه می گردی بنا کن عالمی دیگر!</p>
-            </article>
+        <div class="poem-separator"></div>
 
-        </div>
+      </article>
+
     </div>
+
+  </div>
+
 </section>
 
-<!-- International Poetry -->
+<!-- INTERNATIONAL QUOTES -->
 
-<section class="quotes" id="quotes">
-    <div class="container">
-        <div class="section-heading">
-            <span>POETRY & THOUGHT</span>
-            <h2>از ادبیات جهان</h2>
-        </div>
+<section class="literature section" id="literature">
 
-        <div class="quote-grid">
+  <div class="container">
 
-            <article class="quote-card">
-                <div class="quote-mark">“</div>
-                <p class="quote-text">
-                    Poetry is the spontaneous overflow of powerful feelings;
-                    it takes its origin from emotion recollected in tranquillity.
-                </p>
-                <p class="quote-translation">
-                    شعر، سرریز خودانگیخته احساسات نیرومند است؛
-                    احساسی که در آرامش به یاد آورده شده است.
-                </p>
-                <div class="quote-author">William Wordsworth</div>
-            </article>
-
-            <article class="quote-card">
-                <div class="quote-mark">“</div>
-                <p class="quote-text">
-                    Poetry is an act of peace. Peace goes into the making
-                    of a poem as flour goes into the making of bread.
-                </p>
-                <p class="quote-translation">
-                    شعر، کنشی برای صلح است؛ همان‌گونه که آرد در ساختن نان
-                    به کار می‌رود، صلح نیز در آفرینش شعر حضور دارد.
-                </p>
-                <div class="quote-author">Pablo Neruda</div>
-            </article>
-
-        </div>
+    <div class="section-heading">
+      <div class="eyebrow">WORLD LITERATURE</div>
+      <h2>نگاهی به جهان ادبیات</h2>
+      <p>از اندیشه شاعران و نویسندگان جهان</p>
     </div>
+
+    <p class="quote-intro">
+      تأملاتی درباره ماهیت شعر، آفرینش ادبی
+      و پیوند هنر با زندگی؛ از زبان چهره‌های
+      برجسته ادبیات جهان.
+    </p>
+
+    <div class="quote-grid">
+
+      <article class="quote">
+
+        <div class="quote-mark">“</div>
+
+        <p>
+          شعر، سرریز خودانگیخته احساسات نیرومند است؛
+          احساسی که در آرامش به یاد آورده شده است.
+        </p>
+
+        <cite>
+          ویلیام وردزورث
+          <br>
+          مقدمه کتاب ترانه‌های غنایی (Lyrical Ballads)، ۱۸۰۰
+        </cite>
+
+        <div class="original" dir="ltr">
+          Poetry is the spontaneous overflow of powerful feelings; it takes its origin from emotion recollected in tranquillity.
+        </div>
+
+      </article>
+
+      <article class="quote">
+
+        <div class="quote-mark">“</div>
+
+        <p>
+          شعر، کنشی برای صلح است؛
+          همان‌گونه که آرد در ساختن نان به کار می‌رود،
+          صلح نیز در آفرینش شعر حضور دارد.
+        </p>
+
+        <cite>
+          پابلو نرودا
+          <br>
+          سخنرانی نوبل ادبیات، ۱۹۷۱
+        </cite>
+
+        <div class="original" dir="ltr">
+          Poetry is an act of peace. Peace goes into the making of a poet as flour goes into the making of bread.
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
 </section>
 
-<!-- Contact -->
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
-    <div class="container">
-        <div class="section-heading">
-            <span>GET IN TOUCH</span>
-            <h2>ارتباط با ارغنون</h2>
-        </div>
 
-        <p class="contact-text">
-            برای همراهی، گفت‌وگو و دنبال‌کردن تازه‌ترین نوشته‌ها:
-        </p>
+  <div class="eyebrow">CONTACT</div>
 
-        <a class="instagram-link"
-           href="https://www.instagram.com/arqanun.ir/"
-           target="_blank"
-           rel="noopener noreferrer">
-            Instagram @arqanun.ir
-        </a>
-    </div>
+  <h2>در ارتباط باشیم</h2>
+
+  <p>
+    برای دنبال کردن فعالیت‌های ادبی و آشنایی
+    بیشتر با جهان شعر ارغنون، به صفحه اینستاگرام
+    مراجعه کنید.
+  </p>
+
+  <a class="instagram"
+     href="https://www.instagram.com/arqanun.ir/"
+     target="_blank"
+     rel="noopener noreferrer">
+
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="1.7">
+
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/>
+
+    </svg>
+
+    @arqanun.ir
+
+  </a>
+
 </section>
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
-    <div class="container">
-        <span>ارغنون</span> | سید حسام حسینی
-        <br>
-        تمام واژه‌ها، روایتی از یک جهان‌اند.
+
+  <div class="container footer-content">
+
+    <div>
+      <div class="footer-brand">ارغنون</div>
+      <div>سید حسام حسینی</div>
     </div>
+
+    <div>
+      شعر، اندیشه و ادبیات
+    </div>
+
+    <div>
+      <a href="https://www.instagram.com/arqanun.ir/"
+         target="_blank">@arqanun.ir</a>
+
+      <br>
+
+      © 2026 All Rights Reserved
+    </div>
+
+  </div>
+
 </footer>
 
 </body>
