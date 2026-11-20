@@ -4,12 +4,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="وب‌سایت رسمی سید حسام حسینی، شاعر با تخلص ارغنون؛ شعر، ادبیات و اندیشه.">
+
 <title>ارغنون | سید حسام حسینی</title>
+<meta name="description" content="وب‌سایت رسمی سید حسام حسینی، شاعر با تخلص ارغنون">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Estedad:wght@300;400;500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Estedad:wght@300;400;500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -30,7 +32,9 @@
   box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: var(--bg);
@@ -49,14 +53,14 @@ a {
   margin: auto;
 }
 
-/* Navigation */
+/* NAVIGATION */
 
 header {
   height: 90px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--line);
-  background: rgba(246,243,235,.94);
+  background: rgba(246,243,235,.96);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -83,7 +87,6 @@ header {
   color: var(--muted);
   font-size: 10px;
   font-weight: 400;
-  letter-spacing: 1px;
 }
 
 .menu {
@@ -101,7 +104,7 @@ header {
   color: var(--green);
 }
 
-/* Hero */
+/* HERO */
 
 .hero {
   min-height: 650px;
@@ -174,7 +177,7 @@ header {
   margin-top: 35px;
 }
 
-/* General sections */
+/* GENERAL SECTIONS */
 
 section {
   scroll-margin-top: 90px;
@@ -205,7 +208,7 @@ section {
   margin-top: 5px;
 }
 
-/* About */
+/* ABOUT */
 
 .about {
   background: var(--green);
@@ -243,7 +246,7 @@ section {
   text-align: center;
 }
 
-/* Poetry */
+/* POETRY */
 
 .poetry-intro {
   max-width: 760px;
@@ -293,25 +296,25 @@ section {
 
 .poem-content {
   white-space: pre-line;
-  font-family: 'Vazirmatn', sans-serif;
-  font-size: 14px;
-  line-height: 2.8;
+  font-family: 'Noto Naskh Arabic', serif;
+  font-size: 17px;
+  line-height: 2.7;
   color: #555d54;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .poem-separator {
   width: 35px;
   height: 1px;
   background: var(--gold);
-  margin: 27px 0 0;
+  margin-top: 27px;
 }
 
 .poem-wide {
   grid-column: 1 / -1;
 }
 
-/* Literary quotes */
+/* LITERATURE */
 
 .literature {
   background: #eae9de;
@@ -351,7 +354,7 @@ section {
   font-size: 11px;
 }
 
-/* Contact */
+/* CONTACT */
 
 .contact {
   text-align: center;
@@ -393,7 +396,7 @@ section {
   height: 18px;
 }
 
-/* Footer */
+/* FOOTER */
 
 footer {
   background: var(--dark);
@@ -420,28 +423,84 @@ footer a {
   color: #d2d8cf;
 }
 
+/* RESPONSIVE */
+
 @media(max-width:750px) {
-  header { height: 76px; }
-  .container { width: 88%; }
-  .menu { gap: 13px; font-size: 10px; }
-  .brand { font-size: 23px; }
-  .hero { min-height: 540px; }
-  .hero h1 { letter-spacing: -3px; }
-  .section { padding: 75px 0; }
-  .about-grid { grid-template-columns: 1fr; gap: 25px; }
-  .about-symbol { font-size: 65px; }
-  .poem-grid { grid-template-columns: 1fr; }
-  .poem-wide { grid-column: auto; }
-  .quote-grid { grid-template-columns: 1fr; }
-  .footer-content { flex-direction: column; text-align: center; }
+  header {
+    height: 76px;
+  }
+
+  .container {
+    width: 88%;
+  }
+
+  .menu {
+    gap: 13px;
+    font-size: 10px;
+  }
+
+  .brand {
+    font-size: 23px;
+  }
+
+  .hero {
+    min-height: 540px;
+  }
+
+  .hero h1 {
+    letter-spacing: -3px;
+  }
+
+  .section {
+    padding: 75px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .about-symbol {
+    font-size: 65px;
+  }
+
+  .poem-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .poem-wide {
+    grid-column: auto;
+  }
+
+  .quote-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 @media(max-width:400px) {
-  .menu { gap: 8px; font-size: 9px; }
-  .brand { font-size: 20px; }
-  .poem { padding: 28px 22px; }
-  .poem-content { font-size: 13px; }
+  .menu {
+    gap: 8px;
+    font-size: 9px;
+  }
+
+  .brand {
+    font-size: 20px;
+  }
+
+  .poem {
+    padding: 28px 22px;
+  }
+
+  .poem-content {
+    font-size: 16px;
+  }
 }
+
 </style>
 </head>
 
@@ -449,6 +508,7 @@ footer a {
 
 <header>
   <div class="container nav">
+
     <a href="#home" class="brand">
       ارغنون
       <small>سید حسام حسینی</small>
@@ -461,16 +521,20 @@ footer a {
       <a href="#literature">ادبیات</a>
       <a href="#contact">ارتباط</a>
     </nav>
+
   </div>
 </header>
 
 <main>
 
-<!-- Hero -->
+<!-- HERO -->
 
 <section class="hero" id="home">
   <div class="container hero-content">
-    <div class="eyebrow">POETRY · THOUGHT · LITERATURE</div>
+
+    <div class="eyebrow">
+      POETRY · THOUGHT · LITERATURE
+    </div>
 
     <h1>ارغنون<span>.</span></h1>
 
@@ -485,15 +549,18 @@ footer a {
     </p>
 
     <div class="line"></div>
+
   </div>
 </section>
 
-<!-- About -->
+<!-- ABOUT -->
 
 <section class="about section" id="about">
+
   <div class="container about-grid">
 
     <div>
+
       <div class="section-heading">
         <div class="eyebrow">ABOUT</div>
         <h2>درباره ارغنون</h2>
@@ -504,21 +571,28 @@ footer a {
         ارغنون، تخلص ادبی سید حسام حسینی است؛
         نامی در پیوند با موسیقی کلمات، جهان شعر
         و تجربه انسانی.
+
         <br>
+
         این صفحه، فضایی برای معرفی شاعر،
         انتشار گزیده آثار و پرداختن به جهان
         گسترده ادبیات و اندیشه است.
       </p>
+
     </div>
 
-    <div class="about-symbol">ارغنون</div>
+    <div class="about-symbol">
+      ارغنون
+    </div>
 
   </div>
+
 </section>
 
-<!-- Poems -->
+<!-- POEMS -->
 
 <section class="section" id="poetry">
+
   <div class="container">
 
     <div class="section-heading">
@@ -536,9 +610,8 @@ footer a {
 
     <div class="poem-grid">
 
-      <!-- Poem 1 -->
-
       <article class="poem">
+
         <h3>از دفتر ارغنون</h3>
 
         <div class="poem-content">چنان شدی که نشد پیدا، زچهره ی تو معمایت
@@ -559,11 +632,11 @@ footer a {
 که شیخ بغض هنر دارد، اگر خبر بشود وای ات</div>
 
         <div class="poem-separator"></div>
+
       </article>
 
-      <!-- Poem 2 -->
-
       <article class="poem">
+
         <h3>از دفتر ارغنون</h3>
 
         <div class="poem-content">بگو کجا بگریزم از این قفس که منم
@@ -580,11 +653,11 @@ footer a {
 شکست پشتم از این غم اگرچه تهمتنم</div>
 
         <div class="poem-separator"></div>
+
       </article>
 
-      <!-- Poem 3 -->
-
       <article class="poem poem-wide">
+
         <h3>از دفتر ارغنون</h3>
 
         <div class="poem-content">با وعده و وعید وصالت
@@ -609,15 +682,19 @@ footer a {
 از بس که انتظار کشیدی</div>
 
         <div class="poem-separator"></div>
+
       </article>
 
     </div>
+
   </div>
+
 </section>
 
-<!-- Real literary quotations -->
+<!-- LITERATURE -->
 
 <section class="literature section" id="literature">
+
   <div class="container">
 
     <div class="section-heading">
@@ -630,47 +707,62 @@ footer a {
 
       <article class="quote">
         <div class="quote-mark">«</div>
+
         <p>
-          بنی‌آدم اعضای یک پیکرند<br>
+          بنی‌آدم اعضای یک پیکرند
+          <br>
           که در آفرینش ز یک گوهرند
         </p>
+
         <cite>سعدی شیرازی ـ گلستان، دیباچه</cite>
       </article>
 
       <article class="quote">
         <div class="quote-mark">«</div>
+
         <p>
-          بشنو از نی چون حکایت می‌کند<br>
+          بشنو از نی چون حکایت می‌کند
+          <br>
           وز جدایی‌ها شکایت می‌کند
         </p>
+
         <cite>مولانا جلال‌الدین بلخی ـ مثنوی معنوی، دفتر اول</cite>
       </article>
 
       <article class="quote">
         <div class="quote-mark">«</div>
+
         <p>
-          درخت دوستی بنشان که کام دل به بار آرد<br>
+          درخت دوستی بنشان که کام دل به بار آرد
+          <br>
           نهال دشمنی برکن که رنج بی‌شمار آرد
         </p>
+
         <cite>سعدی شیرازی ـ بوستان</cite>
       </article>
 
       <article class="quote">
         <div class="quote-mark">«</div>
+
         <p>
-          به جهان خرم از آنم که جهان خرم از اوست<br>
+          به جهان خرم از آنم که جهان خرم از اوست
+          <br>
           عاشقم بر همه عالم که همه عالم از اوست
         </p>
+
         <cite>سعدی شیرازی ـ غزلیات</cite>
       </article>
 
     </div>
+
   </div>
+
 </section>
 
-<!-- Contact -->
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
+
   <div class="eyebrow">CONTACT</div>
 
   <h2>در ارتباط باشیم</h2>
@@ -686,21 +778,31 @@ footer a {
      target="_blank"
      rel="noopener noreferrer">
 
-    <svg viewBox="0 0 24 24" fill="none"
-         stroke="currentColor" stroke-width="1.7">
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="1.7">
+
       <rect x="3" y="3" width="18" height="18" rx="5"/>
       <circle cx="12" cy="12" r="4"/>
       <circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/>
+
     </svg>
 
     @arqanun.ir
+
   </a>
+
 </section>
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
+
   <div class="container footer-content">
+
     <div>
       <div class="footer-brand">ارغنون</div>
       <div>سید حسام حسینی</div>
@@ -713,10 +815,14 @@ footer a {
     <div>
       <a href="https://www.instagram.com/arqanun.ir/"
          target="_blank">@arqanun.ir</a>
+
       <br>
+
       © 2026 All Rights Reserved
     </div>
+
   </div>
+
 </footer>
 
 </body>
