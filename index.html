@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f6f3eb">
 
 <title>ارغنون | سید حسام حسینی</title>
 <meta name="description" content="وب‌سایت رسمی سید حسام حسینی، شاعر با تخلص ارغنون">
@@ -16,7 +17,7 @@
 <style>
 :root {
   --bg: #f6f3eb;
-  --paper: #fcfaf5;
+  --paper: #fdfbf6;
   --green: #244738;
   --dark: #193328;
   --olive: #87977d;
@@ -53,10 +54,10 @@ a {
   margin: auto;
 }
 
-/* NAVIGATION */
+/* HEADER */
 
 header {
-  height: 90px;
+  height: 88px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--line);
@@ -76,7 +77,7 @@ header {
 .brand {
   font-family: 'Estedad', sans-serif;
   color: var(--green);
-  font-size: 27px;
+  font-size: 28px;
   font-weight: 800;
   line-height: 1.3;
 }
@@ -91,7 +92,7 @@ header {
 
 .menu {
   display: flex;
-  gap: 32px;
+  gap: 30px;
   font-size: 12px;
   color: #697268;
 }
@@ -101,7 +102,7 @@ header {
 }
 
 .menu a:hover {
-  color: var(--green);
+  color: var(--gold);
 }
 
 /* HERO */
@@ -119,9 +120,9 @@ header {
   content: "ارغنون";
   position: absolute;
   left: -30px;
-  top: 120px;
+  top: 100px;
   font-family: 'Estedad', sans-serif;
-  font-size: clamp(110px, 23vw, 300px);
+  font-size: clamp(130px, 24vw, 310px);
   font-weight: 800;
   color: rgba(36,71,56,.035);
   white-space: nowrap;
@@ -145,8 +146,8 @@ header {
 .hero h1 {
   font-family: 'Estedad', sans-serif;
   color: var(--green);
-  font-size: clamp(58px, 9vw, 108px);
-  line-height: 1.45;
+  font-size: clamp(65px, 10vw, 112px);
+  line-height: 1.4;
   font-weight: 800;
   letter-spacing: -5px;
 }
@@ -163,11 +164,12 @@ header {
 }
 
 .hero-desc {
-  max-width: 520px;
+  max-width: 530px;
   font-size: 14px;
   color: #74796f;
   margin-top: 32px;
   font-weight: 300;
+  line-height: 2.8;
 }
 
 .line {
@@ -184,11 +186,11 @@ section {
 }
 
 .section {
-  padding: 105px 0;
+  padding: 100px 0;
 }
 
 .section-heading {
-  margin-bottom: 45px;
+  margin-bottom: 42px;
 }
 
 .section-heading .eyebrow {
@@ -232,7 +234,7 @@ section {
 
 .about-text {
   font-size: 15px;
-  line-height: 2.7;
+  line-height: 2.8;
   color: #d9dfd7;
   font-weight: 300;
   max-width: 680px;
@@ -260,15 +262,16 @@ section {
 .poem-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  gap: 25px;
 }
 
 .poem {
   background: var(--paper);
   border: 1px solid var(--line);
-  padding: 38px 32px;
+  padding: 42px 30px;
   position: relative;
   transition: .3s;
+  overflow: hidden;
 }
 
 .poem:hover {
@@ -282,42 +285,59 @@ section {
   top: 0;
   right: 0;
   width: 3px;
-  height: 65px;
+  height: 75px;
   background: var(--olive);
 }
 
 .poem h3 {
   font-family: 'Estedad', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: var(--green);
-  margin-bottom: 23px;
+  margin-bottom: 25px;
   font-weight: 600;
 }
 
+/* SPECIAL POETRY TYPOGRAPHY */
+
 .poem-content {
+  direction: rtl;
+  unicode-bidi: plaintext;
   white-space: pre-line;
+  text-align: center;
+
   font-family: 'Noto Naskh Arabic', serif;
-  font-size: 17px;
-  line-height: 2.7;
-  color: #555d54;
+  font-size: 19px;
   font-weight: 500;
+  line-height: 2.65;
+
+  color: #414c43;
+  font-feature-settings: "kern", "liga";
 }
 
 .poem-separator {
-  width: 35px;
+  width: 38px;
   height: 1px;
   background: var(--gold);
-  margin-top: 27px;
+  margin: 30px auto 0;
 }
 
 .poem-wide {
   grid-column: 1 / -1;
 }
 
-/* LITERATURE */
+/* INTERNATIONAL LITERATURE QUOTES */
 
 .literature {
   background: #eae9de;
+}
+
+.quote-intro {
+  font-size: 14px;
+  color: #7c8176;
+  max-width: 650px;
+  margin-top: -20px;
+  margin-bottom: 38px;
+  font-weight: 300;
 }
 
 .quote-grid {
@@ -327,9 +347,14 @@ section {
 }
 
 .quote {
-  padding: 38px;
+  padding: 40px;
   border: 1px solid #d9d9ca;
-  background: rgba(255,255,255,.3);
+  background: rgba(255,255,255,.35);
+  transition: .3s;
+}
+
+.quote:hover {
+  background: var(--paper);
 }
 
 .quote-mark {
@@ -342,16 +367,30 @@ section {
 .quote p {
   font-family: 'Estedad', sans-serif;
   color: var(--green);
-  font-size: 18px;
-  line-height: 2.4;
-  margin: 12px 0 24px;
+  font-size: 19px;
+  line-height: 2.5;
+  margin: 15px 0 25px;
   font-weight: 500;
 }
 
 .quote cite {
+  display: block;
   font-style: normal;
-  color: #85877a;
-  font-size: 11px;
+  color: #777e73;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.quote .original {
+  color: #929487;
+  direction: ltr;
+  text-align: left;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  line-height: 2;
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+  padding-top: 15px;
 }
 
 /* CONTACT */
@@ -364,7 +403,7 @@ section {
 .contact h2 {
   font-family: 'Estedad', sans-serif;
   color: var(--green);
-  font-size: 35px;
+  font-size: 36px;
 }
 
 .contact p {
@@ -372,6 +411,7 @@ section {
   font-size: 13px;
   margin: 15px auto 30px;
   max-width: 500px;
+  line-height: 2.7;
 }
 
 .instagram {
@@ -392,8 +432,8 @@ section {
 }
 
 .instagram svg {
-  width: 18px;
-  height: 18px;
+  width: 19px;
+  height: 19px;
 }
 
 /* FOOTER */
@@ -415,7 +455,7 @@ footer {
 .footer-brand {
   font-family: 'Estedad', sans-serif;
   color: #f5f1e7;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -423,9 +463,10 @@ footer a {
   color: #d2d8cf;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 
 @media(max-width:750px) {
+
   header {
     height: 76px;
   }
@@ -435,12 +476,12 @@ footer a {
   }
 
   .menu {
-    gap: 13px;
+    gap: 12px;
     font-size: 10px;
   }
 
   .brand {
-    font-size: 23px;
+    font-size: 22px;
   }
 
   .hero {
@@ -472,6 +513,11 @@ footer a {
     grid-column: auto;
   }
 
+  .poem-content {
+    font-size: 18px;
+    line-height: 2.6;
+  }
+
   .quote-grid {
     grid-template-columns: 1fr;
   }
@@ -483,6 +529,7 @@ footer a {
 }
 
 @media(max-width:400px) {
+
   .menu {
     gap: 8px;
     font-size: 9px;
@@ -493,14 +540,15 @@ footer a {
   }
 
   .poem {
-    padding: 28px 22px;
+    padding: 32px 18px;
   }
 
   .poem-content {
-    font-size: 16px;
+    font-size: 17px;
+    line-height: 2.55;
   }
-}
 
+}
 </style>
 </head>
 
@@ -530,6 +578,7 @@ footer a {
 <!-- HERO -->
 
 <section class="hero" id="home">
+
   <div class="container hero-content">
 
     <div class="eyebrow">
@@ -551,6 +600,7 @@ footer a {
     <div class="line"></div>
 
   </div>
+
 </section>
 
 <!-- ABOUT -->
@@ -610,6 +660,8 @@ footer a {
 
     <div class="poem-grid">
 
+      <!-- POEM A -->
+
       <article class="poem">
 
         <h3>از دفتر ارغنون</h3>
@@ -635,6 +687,8 @@ footer a {
 
       </article>
 
+      <!-- POEM B -->
+
       <article class="poem">
 
         <h3>از دفتر ارغنون</h3>
@@ -655,6 +709,8 @@ footer a {
         <div class="poem-separator"></div>
 
       </article>
+
+      <!-- POEM C -->
 
       <article class="poem poem-wide">
 
@@ -685,72 +741,100 @@ footer a {
 
       </article>
 
+      <!-- POEM D - NEW -->
+
+      <article class="poem poem-wide">
+
+        <h3>از دفتر ارغنون</h3>
+
+        <div class="poem-content">غمی لبخند زد ناگاه غمگین شد غمی دیگر
+امانت عشق بود اما حقیقت ماتمی دیگر
+ملال انگیز دنیا را به دوش ما نهاد اما
+به منزل می رسیم ای دل تحمل کن کمی دیگر
+در این بازار ننگ و نام تقدیرت مبارک باد
+همانا از تبار عصمت آمد مریمی دیگر
+به آغوشم بکش رقصان ولی در خانه هم پنهان
+که در دنیای قدیسان نمانده محرمی دیگر
+به این تاریک مالامال خورشیدی تعارف کن
+به آن اجساد جاری هدیه کن عیسی دمی دیگر
+به هر گامی مرا چاه زمین می بلعد افعی وار
+شغادی را علم کردند سوی رستمی دیگر
+زمین خورد آسمان ما! –ولی فردا؟ -چه فردایی؟
+چنان خاورمیانه سرنوشت مبهمی دیگر
+خیابان ها تهی از عشق ، قحط آدمی زاد است
+به دنبال چه می گردی بنا کن عالمی دیگر!</div>
+
+        <div class="poem-separator"></div>
+
+      </article>
+
     </div>
 
   </div>
 
 </section>
 
-<!-- LITERATURE -->
+<!-- INTERNATIONAL QUOTES -->
 
 <section class="literature section" id="literature">
 
   <div class="container">
 
     <div class="section-heading">
-      <div class="eyebrow">LITERATURE & WISDOM</div>
-      <h2>در ستایش شعر و ادبیات</h2>
-      <p>از گنجینه ماندگار زبان فارسی</p>
+      <div class="eyebrow">WORLD LITERATURE</div>
+      <h2>نگاهی به جهان ادبیات</h2>
+      <p>از اندیشه شاعران و نویسندگان جهان</p>
     </div>
+
+    <p class="quote-intro">
+      تأملاتی درباره ماهیت شعر، آفرینش ادبی
+      و پیوند هنر با زندگی؛ از زبان چهره‌های
+      برجسته ادبیات جهان.
+    </p>
 
     <div class="quote-grid">
 
       <article class="quote">
-        <div class="quote-mark">«</div>
+
+        <div class="quote-mark">“</div>
 
         <p>
-          بنی‌آدم اعضای یک پیکرند
-          <br>
-          که در آفرینش ز یک گوهرند
+          شعر، سرریز خودانگیخته احساسات نیرومند است؛
+          احساسی که در آرامش به یاد آورده شده است.
         </p>
 
-        <cite>سعدی شیرازی ـ گلستان، دیباچه</cite>
+        <cite>
+          ویلیام وردزورث
+          <br>
+          مقدمه کتاب ترانه‌های غنایی (Lyrical Ballads)، ۱۸۰۰
+        </cite>
+
+        <div class="original" dir="ltr">
+          Poetry is the spontaneous overflow of powerful feelings; it takes its origin from emotion recollected in tranquillity.
+        </div>
+
       </article>
 
       <article class="quote">
-        <div class="quote-mark">«</div>
+
+        <div class="quote-mark">“</div>
 
         <p>
-          بشنو از نی چون حکایت می‌کند
-          <br>
-          وز جدایی‌ها شکایت می‌کند
+          شعر، کنشی برای صلح است؛
+          همان‌گونه که آرد در ساختن نان به کار می‌رود،
+          صلح نیز در آفرینش شعر حضور دارد.
         </p>
 
-        <cite>مولانا جلال‌الدین بلخی ـ مثنوی معنوی، دفتر اول</cite>
-      </article>
-
-      <article class="quote">
-        <div class="quote-mark">«</div>
-
-        <p>
-          درخت دوستی بنشان که کام دل به بار آرد
+        <cite>
+          پابلو نرودا
           <br>
-          نهال دشمنی برکن که رنج بی‌شمار آرد
-        </p>
+          سخنرانی نوبل ادبیات، ۱۹۷۱
+        </cite>
 
-        <cite>سعدی شیرازی ـ بوستان</cite>
-      </article>
+        <div class="original" dir="ltr">
+          Poetry is an act of peace. Peace goes into the making of a poet as flour goes into the making of bread.
+        </div>
 
-      <article class="quote">
-        <div class="quote-mark">«</div>
-
-        <p>
-          به جهان خرم از آنم که جهان خرم از اوست
-          <br>
-          عاشقم بر همه عالم که همه عالم از اوست
-        </p>
-
-        <cite>سعدی شیرازی ـ غزلیات</cite>
       </article>
 
     </div>
